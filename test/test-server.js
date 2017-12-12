@@ -8,12 +8,13 @@
 
  describe('API', function() {
 
-   it('should 200 on GET requests', function() {
+   it('should 200 on GET requests', function(done) {
      return chai.request(app)
        .get('/api/fooooo')
        .then(function(res) {
          res.should.have.status(200);
          res.should.be.json;
+         done();
        });
    });
  });
