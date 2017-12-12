@@ -4,7 +4,7 @@
  const PORT = process.env.PORT || 8080;
 
  app.get('/api/*', (req, res) => {
-   res.json({ok: true});
+   res.status(200).json({ok: true}).end();
  });
 
  app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
