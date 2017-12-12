@@ -1,9 +1,9 @@
- before_script: chmod 0777 ./node_modules/.bin/mocha
- language: node_js
- node_js: node
- services:
-     - mongodb
+before_script: chmod 0777 ./node_modules/.bin/mocha
+language: node_js
+node_js: node
+services:
+  - mongodb
 deploy:
-  provider: heroku
-  api_key: a5ee0e83-4f13-4c7d-9427-f29437519c89
-  app: afternoon-oasis-21652
+ provider: heroku
+ api_key: a5ee0e83-4f13-4c7d-9427-f29437519c89
+ app: afternoon-oasis-21652
