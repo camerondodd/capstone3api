@@ -22,9 +22,8 @@ mongoose.connect(dbURI, () =>{
 });
 // API page
 app.get('/',(req,res)=>{
-	res.render('home');
+	res.render('./public/views/home');
 });
-app.use(express.static('public'));
 // Functions
 function runServer(databaseUrl, port) {
   return new Promise((resolve, reject) => {
