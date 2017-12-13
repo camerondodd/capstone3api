@@ -1,12 +1,12 @@
-const {API_KEY} = require(./config)
 before_script: chmod 0777 ./node_modules/.bin/mocha
 language: node_js
 node_js: node
 env:
-  - NODE_ENV="test"
+- NODE_ENV="test"
 services:
-  - mongodb
+- mongodb
 deploy:
- provider: heroku
- api_key: API_KEY
- app: afternoon-oasis-21652
+  provider: heroku
+  app: afternoon-oasis-21652
+  api_key:
+    secure: sjG6Jb36TFn9LrWdXi4mtUsQ3ji0qxkU4Gy065QxKwq55qAX93zQpKyGrb8RAk/OYx3dRe57PDDirxi82Ges/VJb1M5uCY2wtCOUaXNGJ74ObxKfgSAYqPL6/ZL7M1xbbpTKhj9kImyxZT9h76zYpiTdaT6i/3/AfvvlUj5vgOb2kyZieq2J0jmUou/8ElpTiIHID03/NXD3biJSafV+MPLTmXP62pCm/QfZegV3L7gx81zFJjARdVNc4101Z7g4G/wpBpjQfUBptnfwi3psAEH5xwNAtgyT5/VlXt2+zBggm5ZMmxXdSFnINFW2ngK6LPrQQPtreLwiBsfsZVmP2EyGcuM/UZu9v5O7zh1+A/vkdK7BdALBl9jporoUJ/j1FtX/KxC4AdyXlDmW3ZjzrMfdc5unYucSywHMF7FUjktf4No3d6syNNnv6+RBBDBhD2D6RglNLXHDDkfFgMKjfCQrcu68Rn44Jn3zBuVALZl3m9uLycRQbwiAGif14Zn9gN/b78XrkdgC1N4L5Auu2yqXs9i+DLEuE/mDCOaBrIpL8rR92MWIzzR/GHSiJhG7qRt1+MmpcRmIQcJRvtjR70+HMi2GavJ6XbW+OVdQP1X/hBxuLJnKhPHauXU+MtOwp+wdci+eYa3czS0Eg6/6PEJ1zv0sxbSHSaU9+Ajkj28=
