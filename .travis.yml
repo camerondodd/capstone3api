@@ -1,9 +1,12 @@
+const {API_KEY} = require(./config)
 before_script: chmod 0777 ./node_modules/.bin/mocha
 language: node_js
 node_js: node
+env:
+  - NODE_ENV="test"
 services:
   - mongodb
 deploy:
  provider: heroku
- api_key: a5ee0e83-4f13-4c7d-9427-f29437519c89
+ api_key: API_KEY
  app: afternoon-oasis-21652
