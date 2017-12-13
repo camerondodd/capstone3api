@@ -22,7 +22,7 @@ mongoose.connect(dbURI, () =>{
 });
 // API page
 app.get('/',(req,res)=>{
-	res.render('home',{user:req.user});
+	res.render('home');
 });
 app.use(express.static('public'));
 // Functions
